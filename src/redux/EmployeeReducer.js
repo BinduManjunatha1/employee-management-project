@@ -1,7 +1,7 @@
 const initialState={
     employees:[
-        { id: 0, name: "Test user 1", email: "test1@email.com", phone: 1234567890 },
-        { id: 1, name: "Test User 2", email: "test2@test.com", phone: 4567891230 },
+        { id: 0, name: "Testuser1", email: "test1@email.com", phone: 1234567890 },
+        { id: 1, name: "TestUser2", email: "test2@test.com", phone: 4567891230 },
     ],
     serachedEmployee:[]
 }
@@ -28,7 +28,9 @@ export const employeeReducer = (state = initialState, action) =>
         case "SEARCH_EMPLOYEE":
             {
                 const prevState = {...state}
-                prevState.serachedEmployee = prevState.employees.filter(employee=>employee.id.toString().includes(action.payload))
+                prevState.serachedEmployee = prevState.employees.filter(employee=>{
+                    return employee.id.toString().includes(action.payload)||employee.name.toString().includes(action.payload)
+                })
                 return prevState;
             }
         default:  return state;
