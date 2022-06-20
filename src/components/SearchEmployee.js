@@ -20,7 +20,7 @@ const SearchEmployee = ({employees}) => {
                 {employees.length > 0 ? (
                   employees.map((employee, id) => (
                     <tr key={id}>
-                      <td>{id}</td>
+                      <td>{employee.id}</td>
                       <td>{employee.name}</td>
                       <td>{employee.email}</td>
                       <td>{employee.phone}</td>

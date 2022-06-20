@@ -6,10 +6,7 @@ const ListEmployees = ({ employees,deleteEmployee }) => {
     return (
       <div className="container">
         <div className="row d-flex flex-column">
-          <Link to="/add" className="btn btn-outline-dark my-5 ml-auto ">
-            Add employee
-          </Link>
-          <div className="col-md-10 mx-auto my-4">
+        <div className="col-md-10 mx-auto my-4">
             <table className="table table-hover">
               <thead className="table-header bg-dark text-white">
                 <tr>
