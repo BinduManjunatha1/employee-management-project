@@ -24,7 +24,7 @@ const ListEmployees = ({ employees,deleteEmployee }) => {
                 {employees.length > 0 ? (
                   employees.map((employee, id) => (
                     <tr key={id}>
-                      <td>{id + 1}</td>
+                      <td>{id}</td>
                       <td>{employee.name}</td>
                       <td>{employee.email}</td>
                       <td>{employee.phone}</td>
@@ -53,7 +53,7 @@ const ListEmployees = ({ employees,deleteEmployee }) => {
   };
   
   const mapStateToProps = (state) => ({
-    employees: state,
+    employees: state.employees,
   });
   
   const mapDispatchToProps = (dispatch) => ({

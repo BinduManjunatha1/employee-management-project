@@ -103,7 +103,7 @@ const AddEmployee = ({ employees, addemployee ,deleteemployee}) => {
                   employees.map((employee, id) => (
                     <tr key={id}>
                       <td>{id + 1}</td>
-                      <td>{employees.name}</td>
+                      <td>{employee.name}</td>
                       <td>{employee.email}</td>
                       <td>{employee.phone}</td>
                        <td>
@@ -137,7 +137,7 @@ const AddEmployee = ({ employees, addemployee ,deleteemployee}) => {
 };
 
 const mapStateToProps = (state) => ({
-  employees: state,
+  employees: state.employees,
 });
 
 const mapDispatchToProps = (dispatch) => ({
